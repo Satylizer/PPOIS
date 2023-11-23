@@ -351,13 +351,7 @@ bool MaterialMatrix::isDiagonal() {
 }
 
 bool MaterialMatrix::isUpperTriangular() {
-	if (!isSquare()) {
-		return false;
-	}
-	if (isZero()) {
-		return false;
-	}
-	if (isDiagonal()) {
+	if (!isSquare() || isZero() || isDiagonal()) {
 		return false;
 	}
 
@@ -372,13 +366,7 @@ bool MaterialMatrix::isUpperTriangular() {
 }
 
 bool MaterialMatrix::isLowerTriangular() {
-	if (!isSquare()) {
-		return false;
-	}
-	if (isZero()) {
-		return false;
-	}
-	if (isDiagonal()) {
+	if (!isSquare() || isZero() || isDiagonal()) {
 		return false;
 	}
 
